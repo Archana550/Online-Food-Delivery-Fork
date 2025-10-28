@@ -28,7 +28,10 @@ public class BillController {
 	@Autowired
 	private BillService bService;
 	
-	
+	@GetMapping()
+	public String myName(){
+		return "myLifeisBestLife";
+	}
 	
 	@PostMapping("/bill")
 	public ResponseEntity<BillDto> registeBillHandler(@RequestBody Bill bill) throws BillException{
